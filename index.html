@@ -3,13 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>eTicketing</title>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/app.css">
-  <script src="js/angular.min.js"></script>
-  <script src="js/eTicketing.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/eTicketing.js"></script>
 </head>
 <body>
-
-  <p>Nothing here de {{2 + 2}}</p>
+	<section class="board" ng-controller="boardController as board">
+		<div class="span4" ng-repeat="note in board.notes">
+			<h3>{{note.textBody }}</h3>
+			<h6>por {{note.author}} </h6>
+		</div>
+	</section>
 
 </body>
 </html>
