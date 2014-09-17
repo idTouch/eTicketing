@@ -1,0 +1,6 @@
+var app = angular.module('eTicketing',[]);
+
+var ticket = {
+	author = 'João das Neves',
+	textBody = 'Saber alguma coisa',
+}
