@@ -10,9 +10,9 @@
 </head>
 <body>
 	<section class="board" ng-controller="boardController as board">
-		<div class="span4" ng-repeat="note in board.notes">
+		<div  class= "ticket" ng-repeat="note in board.notes">
 			<h3>{{note.textBody }}</h3>
-			<h6>por {{note.author}} </h6>
+			<h6 class = "author">{{" " + note.author}} </h6>
 		</div>
 	</section>
 
