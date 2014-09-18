@@ -10,10 +10,20 @@
 </head>
 <body>
 	<section class="board" ng-controller="boardController as board">
+		<div class = "ticket">
+		<!-- New Ticket -->
+			<form name = "ideaForm" ng-controller="ideaController as ideaCtrl" ng-submit="ideaForm.$valid && ideaCtrl.addIdea(notes)" novalidate>
+				<textarea ng-model="ideaCtrl.idea.textBody" required>Idea</textarea>
+				<input type="submit" value="Submit" /> 
+			</form>
+		</div>
+
 		<div  class= "ticket" ng-repeat="note in board.notes">
+		<!-- Existing Tickets -->
 			<h3>{{note.textBody }}</h3>
 			<h6 class = "author">{{" " + note.author}} </h6>
-		</div>
+			<h6>{{note.upVotes}} ▲ </h6>
+		</div>	
 	</section>
 
 </body>

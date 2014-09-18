@@ -5,6 +5,18 @@
 		this.notes = tickets;
 	});
 
+	app.controller('ideaController', function(){
+		this.idea = {};
+
+		this.addIdea = function(notes){
+			this.idea.upVotes=0;
+			this.idea.author="João das Neves";
+			this.idea.data=Date.now();
+			tickets.push(this.idea);
+			this.idea = {};
+		};
+	});
+
 	var tickets = [
 		{
 			author: 'João das Neves',
